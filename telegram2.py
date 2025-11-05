@@ -10,7 +10,7 @@ log = logging.getLogger(__name__)
 
 # === HARDCODED: NEW GROUP (TGBOT2) ===
 BOT_TOKEN = "8591457462:AAGQfrP-rZ3QJCBp3oro8KfMWX5B083NYJ8"
-CHAT_ID = "-1002123456789"
+CHAT_ID = "-1003236207321"
 
 def send_telegram(msg):
     url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
