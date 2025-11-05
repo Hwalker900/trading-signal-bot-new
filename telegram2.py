@@ -9,7 +9,7 @@ logging.basicConfig(level=logging.INFO)
 log = logging.getLogger(__name__)
 
 # === HARDCODED: NEW GROUP (TGBOT2) ===
-BOT_TOKEN = "7776677134:AAGJo3VfwiB5gDpCE5e5jvtHonhTcjv-NWc"
+BOT_TOKEN = "8591457462:AAGQfrP-rZ3QJCBp3oro8KfMWX5B083NYJ8"
 CHAT_ID = "-1002123456789"
 
 def send_telegram(msg):
