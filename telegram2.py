@@ -2,6 +2,7 @@ from flask import Flask, request
 import requests
 import datetime
 import logging
+import os  # ← THIS WAS MISSING
 
 app = Flask(__name__)
 logging.basicConfig(level=logging.INFO)
@@ -9,7 +10,7 @@ log = logging.getLogger(__name__)
 
 # === HARDCODED: NEW GROUP (TGBOT2) ===
 BOT_TOKEN = "7776677134:AAGJo3VfwiB5gDpCE5e5jvtHonhTcjv-NWc"
-CHAT_ID   = "-1002123456789"  # ← YOUR NEW GROUP ID
+CHAT_ID   = "-1002123456789"
 
 def send_telegram(msg):
     url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
@@ -54,7 +55,7 @@ def webhook():
 
 log.info("TGBOT2 started — NO DISK, $0")
 
-# === THIS LINE WAS MISSING ===
+# === KEEP FLASK RUNNING ===
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 10000))
     app.run(host='0.0.0.0', port=port)
