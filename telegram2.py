@@ -53,3 +53,8 @@ def webhook():
     return "OK", 200
 
 log.info("TGBOT2 started — NO DISK, $0")
+
+# === THIS LINE WAS MISSING ===
+if __name__ == '__main__':
+    port = int(os.getenv('PORT', 10000))
+    app.run(host='0.0.0.0', port=port)
