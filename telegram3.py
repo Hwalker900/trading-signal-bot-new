@@ -60,6 +60,12 @@ def webhook():
 
     return "OK", 200
 
+# ADD THIS EXACTLY HERE
+@app.route('/health')
+def health():
+    return "OK", 200
+# END OF /health ENDPOINT
+
 log.info("TGBOT2 STARTED — NO DISK, $0 — READY FOR SIGNALS")
 
 # === KEEP FLASK ALIVE ===
