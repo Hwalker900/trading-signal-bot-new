@@ -2,7 +2,7 @@ from flask import Flask, request
 import requests
 import datetime
 import logging
-import os  # ← REQUIRED FOR PORT
+import os
 
 app = Flask(__name__)
 logging.basicConfig(level=logging.INFO)
@@ -60,15 +60,14 @@ def webhook():
 
     return "OK", 200
 
-# ADD THIS EXACTLY HERE
+# Health endpoint for UptimeRobot
 @app.route('/health')
 def health():
     return "OK", 200
-# END OF /health ENDPOINT
 
 log.info("TGBOT2 STARTED — NO DISK, $0 — READY FOR SIGNALS")
 
-# === KEEP FLASK ALIVE ===
+# ---- ONLY FOR LOCAL TESTING ----
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 10000))
     app.run(host='0.0.0.0', port=port, debug=False)
